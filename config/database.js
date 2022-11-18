@@ -1,4 +1,3 @@
-const Sequelize = require('sequelize')
 require("dotenv").config();
 const path = require("path");
 
@@ -20,15 +19,20 @@ module.exports = {
         database: DB_NAME,
         host: DB_HOST,
         port: DB_PORT,
-        dialect: "postgres",
-        ssl: true,
+        dialect: "postgres"
     },
     test: {
         storage: DB_TEST_FILE_PATH,
         logging: false,
-        dialect: "sqlite",
+        dialect: "sqlite"
     },
     production: {
-        url : DB_URI
-    },
+        username: DB_USER,
+        password: DB_PASSWORD,
+        database: `${DB_NAME}_production`,
+        host: DB_HOST,
+        port: DB_PORT,
+        url : DB_URI,
+        dialect: "postgres"
+      }
 };
