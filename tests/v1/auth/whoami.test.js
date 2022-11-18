@@ -4,7 +4,7 @@ const app = require("../../../app");
 describe("GET /v1/auth/whoami", () => {
     it("should response with 200 as status code", async () => {
         const accessToken = await request(app).post("/v1/auth/login").send({
-            email: "member442916@gmail.com",
+            email: "member922689@gmail.com",
             password: "123",
         });
 

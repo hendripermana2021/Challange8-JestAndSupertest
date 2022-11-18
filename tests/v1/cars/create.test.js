@@ -11,8 +11,8 @@ describe("POST /v1/create", () => {
 
     it("should response with 201 as status code", async () => {
         const accessToken = await request(app).post("/v1/auth/login").send({
-            email: "fikri@binar.co.id",
-            password: "123456",
+            email: "admin@gmail.com",
+            password: "123",
         });
 
         return request(app)
@@ -38,8 +38,8 @@ describe("POST /v1/create", () => {
 
     it("should response with 401 as status code", async () => {
         const accessToken = await request(app).post("/v1/auth/login").send({
-            email: "brian@binar.co.id",
-            password: "123456",
+            email: "customer@gmail.com",
+            password: "123",
         });
 
         return request(app)
@@ -74,8 +74,8 @@ describe("POST /v1/create", () => {
 
     afterAll(async () => {
         const accessToken = await request(app).post("/v1/auth/login").send({
-            email: "fikri@binar.co.id",
-            password: "123456",
+            email: "admin@gmail.com",
+            password: "123",
         });
 
         return request(app)

@@ -1,29 +1,33 @@
-require("dotenv").config();
-const path = require("path");
-
-const DB_TEST_FILE_PATH = path.join(__dirname, "../db/challange8.sqlite");
 const {
-    DB_USER = "postgres",
-    DB_PASSWORD = "1",
-    DB_NAME = "bcr",
-    DB_HOST = "127.0.0.1",
-    DB_PORT = "5432",
+    DB_USER,
+    DB_PASSWORD,
+    DB_NAME,
+    DB_HOST,
+    DB_PORT,
+    DB_USER1,
+    DB_PASSWORD1,
+    DB_NAME1,
+    DB_HOST1,
+    DB_PORT1,
     DB_URI
   } = process.env;
 
 module.exports = {
     development: {
-        username: DB_USER,
-        password: DB_PASSWORD,
-        database: `${DB_NAME}_development`,
-        host: DB_HOST,
-        port: DB_PORT,
+        username: DB_USER1,
+        password: DB_PASSWORD1,
+        database: `${DB_NAME1}_development`,
+        host: DB_HOST1,
+        port: DB_PORT1,
         dialect: "postgres"
     },
     test: {
-        storage: DB_TEST_FILE_PATH,
-        logging: false,
-        dialect: "sqlite"
+        username: DB_USER1,
+        password: DB_PASSWORD1,
+        database: `${DB_NAME1}_development`,
+        host: DB_HOST1,
+        port: DB_PORT1,
+        dialect: "postgres"
     },
     production: {
         username: DB_USER,

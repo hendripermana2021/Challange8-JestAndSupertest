@@ -11,13 +11,13 @@ describe("PUT /v1/cars/:id", () => {
 
     beforeEach(async () => {
         accessTokenAdmin = await request(app).post("/v1/auth/login").send({
-            email: "fikri@binar.co.id",
-            password: "123456",
+            email: "admin@gmail.com",
+            password: "123",
         });
 
         accessTokenCustomer = await request(app).post("/v1/auth/login").send({
-            email: "brian@binar.co.id",
-            password: "123456",
+            email: "customer@gmail.com",
+            password: "123",
         });
 
         car = await request(app).post("/v1/cars").set("Content-Type", "application/json").set("Authorization", `Bearer ${accessTokenAdmin.body.accessToken}`).send({

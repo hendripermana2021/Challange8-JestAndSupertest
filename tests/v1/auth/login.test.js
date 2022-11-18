@@ -2,8 +2,8 @@ const request = require("supertest");
 const app = require("../../../app");
 
 describe("POST /v1/auth/login", () => {
-    const email = "fikri@binar.co.id";
-    const password = "123456";
+    const email = "admin@gmail.com";
+    const password = "123";
     const wrongEmail = "invalid@gmail.com";
     const wrongPassword = "invalid";
 
