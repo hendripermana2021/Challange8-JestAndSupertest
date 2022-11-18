@@ -4,11 +4,11 @@ const {
     DB_NAME,
     DB_HOST,
     DB_PORT,
-    DB_USER1,
-    DB_PASSWORD1,
-    DB_NAME1,
-    DB_HOST1,
-    DB_PORT1,
+    DB_USER1 = 'postgres',
+    DB_PASSWORD1 = '1',
+    DB_NAME1 = 'challange8',
+    DB_HOST1 = '127.0.0.1',
+    DB_PORT1 = '5432',
     DB_URI
   } = process.env;
 
