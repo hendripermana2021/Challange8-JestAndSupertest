@@ -3,13 +3,12 @@ const path = require("path");
 
 const DB_TEST_FILE_PATH = path.join(__dirname, "../db/challange8.sqlite");
 const {
-    DB_USER,
-    DB_PASSWORD,
-    DB_NAME,
-    DB_HOST,
-    DB_PORT,
+    DB_USER = "postgres",
+    DB_PASSWORD = "1",
+    DB_NAME = "bcr",
+    DB_HOST = "127.0.0.1",
+    DB_PORT = "5432",
     DB_URI
-
   } = process.env;
 
 module.exports = {
