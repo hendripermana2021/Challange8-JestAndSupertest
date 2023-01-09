@@ -14,11 +14,11 @@ const {
 
 module.exports = {
     development: {
-        username: DB_USER1,
-        password: DB_PASSWORD1,
-        database: `${DB_NAME1}_development`,
-        host: DB_HOST1,
-        port: DB_PORT1,
+        username: "postgres",
+        password: "1",
+        database: "development",
+        host: "127.0.0.1",
+        port: "5432",
         dialect: "postgres"
     },
     test: {
